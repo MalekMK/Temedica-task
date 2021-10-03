@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    image: frontend
+    container_name: frontend
+    command: npm run start
+    volumes:
+      - ./frontend/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+

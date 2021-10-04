@@ -49,7 +49,7 @@ export const DrugList = () => {
         </Typography>
       )}
       {drugList.map((elt, index) => (
-        <CardItem key={index} item={elt} wordToHighlight={search} />
+        <CardItem key={elt.id} item={elt} wordToHighlight={search} />
       ))}
     </>
   );

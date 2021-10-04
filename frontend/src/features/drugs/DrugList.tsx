@@ -48,7 +48,7 @@ export const DrugList = () => {
           {`Showing ${drugList.length} results`}
         </Typography>
       )}
-      {drugList.map((elt, index) => (
+      {drugList.map((elt) => (
         <CardItem key={elt.id} item={elt} wordToHighlight={search} />
       ))}
     </>
